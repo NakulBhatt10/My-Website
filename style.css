@@ -1,0 +1,13 @@
+/* Apply the background image to the entire webpage */
+body {
+    background-image: url('website.jpg');
+    /* Replace with the correct path to your image */
+    background-size: cover;
+    /* Ensures the image covers the entire page */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    background-position: center center;
+    /* Centers the image */
+    background-attachment: fixed;
+    /* Keeps the background fixed while scrolling */
+}
