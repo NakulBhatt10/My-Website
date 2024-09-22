@@ -11,3 +11,13 @@ body {
     background-attachment: fixed;
     /* Keeps the background fixed while scrolling */
 }
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+.courseImg {
+    height: 100px;
+    width: 100px;
+}
