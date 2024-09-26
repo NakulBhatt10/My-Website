@@ -8,16 +8,46 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="Images\favicon-32x32.png"
+      href="Images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="My Website/myweb.css" />
 
     <style>
-      /* CSS for the right panel */
+      /* General content styling */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        scroll-behavior: smooth;
+        margin: 0;
+        overflow-x: hidden;
+      }
+
+      /* Navbar Styling */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+      }
+
+      /* Right Panel with Buttons */
       .right-panel {
         position: fixed;
         right: 0;
-        top: 30%;
+        top: 50%;
         transform: translateY(-50%);
         background-color: #333;
         padding: 10px;
@@ -36,23 +66,11 @@
         margin-bottom: 10px;
       }
 
-      /* Add a hover effect to the logo */
       .right-panel img:hover {
         transform: scale(1.5);
       }
 
-      /* General content styling */
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-        scroll-behavior: smooth;
-        margin: 0;
-        overflow-x: hidden;
-      }
-
+      /* Section Styling */
       .section {
         background-image: url("Images/background2.png");
         background-repeat: no-repeat;
@@ -64,25 +82,11 @@
         font-size: 2em;
         background-color: #f0f0f0;
         margin: 0;
-      }
-
-      nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        padding: 10px;
+        padding: 20px;
         text-align: center;
       }
 
-      nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-      }
-
+      /* Intro Text Styling */
       .intro-text {
         color: #a5d3f2;
         margin-inline-end: 0;
@@ -92,6 +96,82 @@
 
       .intro-paragraph {
         color: #95cef4;
+      }
+
+      /* Image Resizing for Certificates */
+      #section2 img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px;
+      }
+
+      /* Responsive Design: Mobile and Tablet */
+      @media (max-width: 768px) {
+        nav a {
+          display: block;
+          margin: 10px 0;
+        }
+
+        .right-panel {
+          top: auto;
+          bottom: 0;
+          width: 100%;
+          transform: translateY(0);
+          flex-direction: row;
+          justify-content: center;
+          border-radius: 10px 10px 0 0;
+        }
+
+        .right-panel img {
+          margin-bottom: 0;
+          margin-right: 10px;
+        }
+
+        /* Adjusting section height for mobile */
+        .section {
+          height: auto;
+          padding: 50px 10px;
+        }
+
+        .intro-text {
+          margin-left: 0;
+          margin-right: 0;
+          font-size: 1.2em;
+        }
+
+        nav {
+          padding: 20px;
+        }
+
+        nav a {
+          margin: 5px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .intro-text {
+          font-size: 1em;
+        }
+
+        nav a {
+          font-size: 1em;
+        }
+
+        .section {
+          font-size: 1.5em;
+        }
+      }
+
+      /* Responsive for tablets */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .intro-text {
+          font-size: 1.5em;
+          margin-right: 100px;
+        }
+
+        .section {
+          padding: 50px;
+        }
       }
     </style>
   </head>
