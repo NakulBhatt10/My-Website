@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
     <title>Nakul Bhatt</title>
     <link
       rel="icon"
@@ -10,6 +10,52 @@
       sizes="32x32"
       href="Images\favicon-32x32.png"
     />
+    <style>
+      /* Make the scroll behavior smooth */
+      html {
+        scroll-behavior: smooth; /* Enables smooth scrolling for the whole page */
+      }
+
+      /* Style for the back to top button */
+      .top-button {
+        position: fixed; /* Stays in place even when you scroll */
+        bottom: 20px; /* Distance from the bottom of the screen */
+        left: 20px; /* Distance from the right side of the screen */
+        background-color: #3498db; /* Button color */
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 24px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Add a transition effect */
+      }
+
+      /* Hover effect for the button */
+      .top-button:hover {
+        background-color: #2980b9; /* Darker blue on hover */
+        transform: scale(1.1); /* Slightly increases the size */
+      }
+
+      /* Style for sections */
+      .section {
+        height: 100vh; /* Full screen height for demonstration */
+        padding: 20px;
+      }
+
+      .section-1 {
+        background-color: #f1c40f;
+      }
+
+      .section-2 {
+        background-color: #2ecc71;
+      }
+
+      .section-3 {
+        background-color: #e74c3c;
+      }
+    </style>
 
     <style>
       /* Fixed size image */
@@ -171,6 +217,10 @@
         <img src="Images/github.png" alt="GitHub" />
       </a>
     </div>
+    <a href="#top">
+      <button class="top-button">&#8593;</button>
+      <!-- Upward arrow -->
+    </a>
 
     <!-- ChatBot Integration -->
     <a
