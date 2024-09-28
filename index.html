@@ -8,46 +8,72 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="Images/favicon-32x32.png"
+      href="Images\favicon-32x32.png"
     />
+
+    <style>
+      /* Fixed size image */
+      .fixed-size-image {
+        width: 300px; /* Set the width */
+        height: 20px; /* Set the height */
+        object-fit: cover; /* Ensures the image fits within the specified dimensions */
+      }
+    </style>
+    <style>
+      /* Making the paragraph text transparent using opacity */
+      .transparent-text {
+        opacity: 1; /* 50% transparent text */
+        font-size: 20px;
+        color: rgb(192, 230, 238); /* This can be any color you want */
+      }
+    </style>
+
+    <style>
+      /* Float the image to the right */
+      .float-right {
+        float: right;
+        width: 800px; /* Set width for the image */
+        height: 600px; /* Height adjusts automatically */
+        margin: 0px; /* Adds space around the image */
+      }
+    </style>
+
+    <style>
+      /* Styling the h3 (Achievements) */
+      h3 {
+        color: #ace2f9; /* This is a blue color. You can change it to any color you want. */
+        font-size: 40px; /* Optional: Adjust the font size if needed */
+        font-family: "Arial", sans-serif; /* Optional: Change the font family */
+        text-align: center; /* Optional: Center align the heading */
+      }
+    </style>
+    <style>
+      /* Resize the image to a fixed width and height */
+      .fixed-size-image {
+        width: 300px; /* Fixed width */
+        height: 200px; /* Fixed height */
+        object-fit: cover; /* Ensures the image fits within the specified dimensions */
+      }
+    </style>
+
+    <style>
+      /* Resize only this particular image */
+      .resize-image {
+        width: 200px; /* Set the width of the image */
+        height: auto; /* Height will adjust to maintain aspect ratio */
+        border-radius: 10px; /* Optional: adds rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow */
+      }
+    </style>
+
     <link rel="stylesheet" href="My Website/myweb.css" />
 
     <style>
-      /* General content styling */
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-        scroll-behavior: smooth;
-        margin: 0;
-        overflow-x: hidden;
-      }
-
-      /* Navbar Styling */
-      nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        padding: 10px;
-        text-align: center;
-      }
-
-      nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-      }
-
-      /* Right Panel with Buttons */
+      /* CSS for the right panel */
       .right-panel {
         position: fixed;
         right: 0;
-        top: 50%;
+        top: 30%;
         transform: translateY(-50%);
         background-color: #333;
         padding: 10px;
@@ -66,11 +92,23 @@
         margin-bottom: 10px;
       }
 
+      /* Add a hover effect to the logo */
       .right-panel img:hover {
         transform: scale(1.5);
       }
 
-      /* Section Styling */
+      /* General content styling */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        scroll-behavior: smooth;
+        margin: 0;
+        overflow-x: hidden;
+      }
+
       .section {
         background-image: url("Images/background2.png");
         background-repeat: no-repeat;
@@ -82,11 +120,25 @@
         font-size: 2em;
         background-color: #f0f0f0;
         margin: 0;
-        padding: 20px;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px;
         text-align: center;
       }
 
-      /* Intro Text Styling */
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+      }
+
       .intro-text {
         color: #a5d3f2;
         margin-inline-end: 0;
@@ -96,82 +148,6 @@
 
       .intro-paragraph {
         color: #95cef4;
-      }
-
-      /* Image Resizing for Certificates */
-      #section2 img {
-        max-width: 100%;
-        height: auto;
-        margin: 10px;
-      }
-
-      /* Responsive Design: Mobile and Tablet */
-      @media (max-width: 768px) {
-        nav a {
-          display: block;
-          margin: 10px 0;
-        }
-
-        .right-panel {
-          top: auto;
-          bottom: 0;
-          width: 100%;
-          transform: translateY(0);
-          flex-direction: row;
-          justify-content: center;
-          border-radius: 10px 10px 0 0;
-        }
-
-        .right-panel img {
-          margin-bottom: 0;
-          margin-right: 10px;
-        }
-
-        /* Adjusting section height for mobile */
-        .section {
-          height: auto;
-          padding: 50px 10px;
-        }
-
-        .intro-text {
-          margin-left: 0;
-          margin-right: 0;
-          font-size: 1.2em;
-        }
-
-        nav {
-          padding: 20px;
-        }
-
-        nav a {
-          margin: 5px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .intro-text {
-          font-size: 1em;
-        }
-
-        nav a {
-          font-size: 1em;
-        }
-
-        .section {
-          font-size: 1.5em;
-        }
-      }
-
-      /* Responsive for tablets */
-      @media (min-width: 769px) and (max-width: 1024px) {
-        .intro-text {
-          font-size: 1.5em;
-          margin-right: 100px;
-        }
-
-        .section {
-          padding: 50px;
-        }
       }
     </style>
   </head>
@@ -208,8 +184,8 @@
     <nav>
       <a href="#section1">Home</a>
       <a href="#section2">Achievements</a>
-      <a href="#section3">Projects</a>
-      <a href="#section4">Example 1</a>
+      <a href="#section3">Education</a>
+
       <a href="#section5">Example 2</a>
       <a href="#section6">About Me</a>
     </nav>
@@ -229,16 +205,74 @@
 
     <div id="section2" class="section">
       <h3>Achievements</h3>
-      <img id="courseImg1" src="Images/IBM_one.png" alt="Certificate 1" />
-      <img id="courseImg2" src="Images/background.png" alt="Certificate 2" />
-      <img id="courseImg3" src="Images/Certificate2.png" alt="Certificate 3" />
+      <img
+        class="fixed-size-image"
+        id="courseImg1"
+        src="Images\IBM one.png"
+        alt="Certificate 1"
+      />
+      <img
+        class="fixed-size-image"
+        id="courseImg2"
+        src="Images\ibm2.png"
+        alt="Certificate 2"
+      />
+      <img
+        class="fixed-size-image"
+        id="courseImg3"
+        src="Images\Certificate2.jpg.png"
+        alt="Certificate 3"
+      />
+      <br />
+      <img
+        class="resize-image"
+        id="courseImg4"
+        src="Images\badge.png"
+        alt="IBM BADGE"
+      />
     </div>
 
-    <div id="section3" class="section">Projects</div>
-    <div id="section4" class="section">Example Section 1</div>
+    <div id="section3" class="section">
+      <img
+        class="float-right"
+        src="Images\mithibai.jpg"
+        alt="mithibai college"
+      />
+
+      <p class="transparent-text">
+        I completed my higher secondary education at Mithibai College, a
+        prestigious institution located in Vile Parle, Mumbai. During my time at
+        Mithibai, I was exposed to a diverse academic environment that not only
+        honed my intellectual skills but also encouraged holistic development.
+        The vibrant campus culture and highly experienced faculty provided me
+        with numerous opportunities to grow both academically and personally. My
+        time at Mithibai laid a strong foundation for my further education and
+        helped me develop a deep passion for learning and excellence.
+      </p>
+    </div>
+
+    <div id="section3" class="section">
+      <img class="float-right" src="Images\k-j-somaiya.jpg" alt="KJ SOMAIYA" />
+
+      <p class="transparent-text">
+        I completed my higher secondary education at Mithibai College, a
+        prestigious institution located in Vile Parle, Mumbai. During my time at
+        Mithibai, I was exposed to a diverse academic environment that not only
+        honed my intellectual skills but also encouraged holistic development.
+        The vibrant campus culture and highly experienced faculty provided me
+        with numerous opportunities to grow both academically and personally. My
+        time at Mithibai laid a strong foundation for my further education and
+        helped me develop a deep passion for learning and excellence.
+      </p>
+    </div>
+    <div id="section3" class="section">
+      <img class="fixed-size-image" src="Images\kj .png" alt="campus" />
+    </div>
     <div id="section5" class="section">Example Section 2</div>
     <div id="section6" class="section">About Me</div>
 
     <script src="myweb.js"></script>
   </body>
 </html>
+
+https://www.credly.com/badges/0c2b9ac0-aafe-4ea4-9aac-fa2fecbb4a4a/public_url
